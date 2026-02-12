@@ -7,10 +7,10 @@ export default function Contact() {
           Open to opportunities, collaborations, or just saying hi!
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="mailto:your.email@example.com" className="px-8 py-4  bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
+          <a href="mailto:your.abhiramkrishna286@gmail.com" className="px-8 py-4  bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
             Email Me
           </a>
-          <a href="https://github.com/abhiram1208/abhiram1208" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border-2  border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition">
+          <a href="https://github.com/abhiram1208/abhiram1208" target="_blank" rel="noopener noreferrer" className="px-8 py-4  bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
             GitHub
           </a>
         </div>

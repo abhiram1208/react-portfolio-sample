@@ -10,6 +10,7 @@ export default function Navbar() {
   const { mode } = useSelector((state) => state.theme);
 
   useEffect(() => {
+    console.log("Theme changed to", mode);
     if (mode === "dark") {
       document.documentElement.classList.add("dark");
     } else {
