@@ -6,7 +6,6 @@ export default function About() {
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
         <div className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto space-y-6">
-          
           <div>
             <img
               src={me}
@@ -15,12 +14,21 @@ export default function About() {
             />
           </div>
 
-          <p>Hello! I'm Abhiram, a beginner React developer from Kerala.</p>
+          <p>Hello! I'm Abhiram, a beginner Full Stack developer from Kerala.</p>
           <p>
-            I'm learning modern frontend tools like React, Tailwind CSS v4,
-            Redux Toolkit, and Vite to build clean, fast websites.
-          </p>
-          <p>Excited to create real projects and improve every day!</p>
+            I am a Computer Science graduate with a strong interest in
+            full-stack development. I have hands-on experience in building web
+            applications using both frontend and backend technologies.
+            Currently, I am enhancing my skills in the MERN stack at ExpertzLab,
+            focusing on developing real-world, scalable applications. 
+             </p>
+            <p>Excited to create real projects and improve every day!</p>
+           
+           <p>🎯 Goal: To become a skilled full-stack developer and
+            contribute to impactful projects focusing on becoming a full-stack
+            developer and actively looking for opportunities.</p>
+          
+          
         </div>
       </div>
     </section>

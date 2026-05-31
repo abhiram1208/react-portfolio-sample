@@ -8,11 +8,15 @@ export default function Contact() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <a href="mailto:your.abhiramkrishna286@gmail.com" className="px-8 py-4  bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
-            Email Me
+            Mail
           </a>
           <a href="https://github.com/abhiram1208/abhiram1208" target="_blank" rel="noopener noreferrer" className="px-8 py-4  bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
             GitHub
           </a>
+          <a href="https://www.linkedin.com/in/abhiramkrishna286/" target="_blank" rel="noopener noreferrer" className="px-8 py-4  bg-primary text-white rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
+            LinkedIn
+          </a>
+          
         </div>
       </div>
     </section>
