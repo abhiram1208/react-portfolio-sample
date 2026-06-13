@@ -10,9 +10,8 @@ export default function Projects() {
     "Chatbot for financial insights and tips"
   ],
 
-  tech: ["Flutter", "Python", "Django", "SQLite"],
- github: "https://github.com/abhiram1208/ExpenseTrackerApp-flutter.git",
- github: "https://github.com/abhiram1208/ExpenseTrackerApplication-python.git"
+  tech: ["Flutter", "Python", "Django"],
+ github: "https://github.com/abhiram1208/Expense-Tracker_App.git",
 
 },
 
@@ -28,8 +27,7 @@ export default function Projects() {
     "Mobile-friendly responsive design"
   ],
 
-  tech: ["React.js", "Redux Toolkit", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
-
+tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
   github: "https://github.com/abhiram1208/VibeSphere.git"
 },
 {
