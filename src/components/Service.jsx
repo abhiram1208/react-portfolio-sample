@@ -1,54 +1,90 @@
+import { motion } from "framer-motion";
+import { Code, Server, Smartphone, PenTool,Database,Cloud } from "lucide-react";
+
 const services = [
   {
     title: "Frontend Development",
-    desc: "Responsive websites using React & modern UI",
+    desc: "Building modern, responsive, and high-performance user interfaces using React, Tailwind CSS, and smooth animations.",
+    icon: <Code size={32} />,
   },
   {
     title: "Backend Development",
-    desc: "APIs using Node.js ",
+    desc: "Designing secure and scalable REST APIs with Node.js, Express, and database integration.",
+    icon: <Server size={32} />,
   },
   {
-    title: "App Development",
-    desc: "Flutter-based mobile apps",
+    title: "Full Stack Web Development",
+    desc: "Building complete web applications using MERN stack with authentication, APIs, and responsive UI.",
+    icon: <Smartphone size={32} />,
   },
+  {
+    title: "Graphic Design (Canva)",
+    desc: "Designing eye-catching social media posts, banners, posters, and marketing materials using Canva with a modern and clean style.",
+    icon: <PenTool size={32} />,
+  },
+  {
+  title: "Database Management",
+  desc: "Building and maintaining structured databases with efficient data modeling, CRUD operations, and seamless backend integration.",
+  icon: <Database size={32} />,
+},
+{
+  title: "Cloud Deployment (AWS)",
+  desc: "Deploying applications on AWS with cloud services, ensuring scalability, performance, and secure hosting.",
+  icon: <Cloud size={32} />,
+},
 ];
 
 export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors"
+      className="py-20 px-6 bg-gradient-to-b from-[#020617] to-[#0f172a]"
     >
       <div className="max-w-6xl mx-auto text-center">
-        
-        {/* Heading */}
-        <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">
-          Services
-        </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-12">
-          What I can do for you
-        </p>
+        {/* 🔥 Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-4xl font-bold mb-4 text-white"
+        >
+          My <span className="text-cyan-400">Services</span>
+        </motion.h2>
 
-        {/* Grid */}
+        <p className="text-gray-400 mb-14">What I can build for you 🚀</p>
+
+        {/* 🚀 Grid */}
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {services.map((s, i) => (
-            <div
+            <motion.div
               key={i}
-              className="p-6 rounded-xl shadow-md 
-              bg-gray-50 dark:bg-gray-800 
-              hover:shadow-xl hover:-translate-y-2 
-              transition-all duration-300"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="
+                p-8 rounded-xl 
+                bg-white/5 backdrop-blur-md 
+                border border-white/10 
+                hover:border-cyan-400 
+                shadow-lg hover:shadow-cyan-400/30 
+                transition duration-300
+              "
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+              {/* 🔷 Icon */}
+              <div className="mb-4 text-cyan-400 flex justify-center">
+                {s.icon}
+              </div>
+
+              {/* 🧩 Title */}
+              <h3 className="text-xl font-semibold mb-3 text-white">
                 {s.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                {s.desc}
-              </p>
-            </div>
+
+              {/* 🧠 Description */}
+              <p className="text-gray-400 text-sm">{s.desc}</p>
+            </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -1,25 +1,3 @@
-// export default function Skills() {
-//   const skills = [
-//     "HTML5 & CSS3", "JavaScript (ES6+)", "React.js", "Redux Toolkit",
-//     "Tailwind CSS v4", "Vite", "Responsive Design", "Node.js", "Git","MongoDB","Express.js","AWS Cloud"
-//   ]
-
-//   return (
-//     <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
-//       <div className="max-w-5xl mx-auto">
-//         <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-//           {skills.map((skill, i) => (
-//             <div key={i} className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md text-center font-medium hover:shadow-xl transition">
-//               {skill}
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
 import {
   FaHtml5,
   FaCss3Alt,
@@ -37,6 +15,8 @@ import {
   SiMongodb,
   SiExpress,
 } from "react-icons/si";
+
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const skills = [
@@ -65,19 +45,47 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
+    <section
+      id="skills"
+      className="py-20 px-6 bg-gradient-to-b from-[#020617] to-[#0f172a]"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* 🔥 TITLE */}
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-4xl font-bold text-center mb-16 text-white"
+        >
+          My <span className="text-cyan-400">Skills</span>
+        </motion.h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {/* 🚀 GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {skills.map((skill, i) => (
-            <div
+            <motion.div
               key={i}
-              className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md text-center hover:shadow-xl transition transform hover:-translate-y-2"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05 }}
+              whileHover={{ scale: 1.08 }}
+              className="p-6 rounded-xl text-center 
+          bg-white/5 backdrop-blur-md 
+          border border-white/10 
+          hover:border-cyan-400 
+          shadow-md hover:shadow-cyan-400/30 
+          transition"
             >
-              <div className="flex justify-center mb-3">{skill.icon}</div>
-              <p className="font-medium">{skill.name}</p>
-            </div>
+              {/* ICON */}
+              <div
+                className="flex justify-center mb-4 text-4xl 
+          drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
+              >
+                {skill.icon}
+              </div>
+
+              {/* NAME */}
+              <p className="font-medium text-gray-200">{skill.name}</p>
+            </motion.div>
           ))}
         </div>
       </div>
