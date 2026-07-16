@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#020617] to-[#0f172a] px-6">
-      <div className="text-center max-w-3xl">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#020617] to-[#0f172a] px-4 overflow-hidden">
+      <div className="text-center max-w-3xl w-full">
         {/* 👋 Intro */}
         <motion.p
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-cyan-400 mb-3 tracking-wide"
+          className="text-cyan-400 mb-3 tracking-wide px-2"
         >
           👋 Hello, I'm
         </motion.p>
@@ -17,7 +17,7 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold text-white mb-4"
+          className="text-4xl md:text-6xl font-bold text-white mb-4 break-words px-2"
         >
           Abhiram Krishna
         </motion.h1>
@@ -26,7 +26,7 @@ export default function Hero() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-xl md:text-2xl text-gray-300 mb-6"
+          className="text-lg md:text-2xl text-gray-300 mb-6 break-words px-2"
         >
           Full Stack Developer | React • Node • MongoDB
         </motion.h2>
@@ -35,7 +35,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-gray-400 mb-8 leading-relaxed"
+          className="text-gray-400 mb-8 leading-relaxed break-words px-2"
         >
           I build scalable web applications with modern UI and efficient backend
           systems. Passionate about creating clean, user-friendly digital
@@ -46,7 +46,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex justify-center gap-4 flex-wrap"
+          className="flex justify-center gap-4 flex-wrap px-2"
         >
           <a
             href="#projects"
