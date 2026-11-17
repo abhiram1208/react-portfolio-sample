@@ -7,13 +7,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Global smooth scroll */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* Base styles */
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
@@ -26,9 +24,22 @@ body {
          duration-300;
 }
 
-/* Glass effect utility */
 .glass {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes snowflakeDrift {
+  0% {
+    transform: translate3d(-40px, -10vh, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(45px, 50vh, 0) rotate(180deg);
+  }
+
+  100% {
+    transform: translate3d(100px, 110vh, 0) rotate(360deg);
+  }
 }

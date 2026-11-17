@@ -108,7 +108,7 @@ export default function Projects() {
               transition duration-300"
             >
               {/* ⭐ FEATURED TAG */}
-              {(i === 1 || i===0 )&&(
+              {(i === 1 || i === 0) && (
                 <span className="text-xs bg-cyan-400 text-black px-2 py-1 rounded mb-3 inline-block">
                   ⭐ Featured
                 </span>

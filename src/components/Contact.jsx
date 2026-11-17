@@ -9,25 +9,27 @@ import { useRef } from "react";
 export default function Contact() {
   const form = useRef();
 
-const sendEmail = (e) => {
-  e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
- emailjs.sendForm(
-  import.meta.env.VITE_SERVICE_ID,
-  import.meta.env.VITE_TEMPLATE_ID,
-  form.current,
-  import.meta.env.VITE_PUBLIC_KEY
-).then(
-      () => {
-        alert("Message sent successfully 🚀");
-        form.current.reset(); 
-      },
-      (error) => {
-        console.log(error.text);
-        alert("Something went wrong ❌");
-      }
-    );
-};
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          alert("Message sent successfully 🚀");
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Something went wrong ❌");
+        },
+      );
+  };
   return (
     <section
       id="contact"
@@ -48,43 +50,43 @@ const sendEmail = (e) => {
         </p>
 
         {/* 📩 FORM */}
-     <motion.form
-  ref={form}
-  onSubmit={sendEmail}
-  className="max-w-md mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 space-y-4"
->
-  <input
-    type="text"
-    name="user_name"
-    placeholder="Your Name"
-    required
-    className="w-full px-4 py-2 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
-  />
+        <motion.form
+          ref={form}
+          onSubmit={sendEmail}
+          className="max-w-md mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 space-y-4"
+        >
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+            className="w-full px-4 py-2 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+          />
 
-  <input
-    type="email"
-    name="user_email"
-    placeholder="Your Email"
-    required
-    className="w-full px-4 py-2 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
-  />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+            className="w-full px-4 py-2 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+          />
 
-  <textarea
-    name="message"
-    rows="3"
-    placeholder="Your Message"
-    required
-    className="w-full px-4 py-2 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
-  ></textarea>
+          <textarea
+            name="message"
+            rows="3"
+            placeholder="Your Message"
+            required
+            className="w-full px-4 py-2 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+          ></textarea>
 
-  <button
-    type="submit"
-    className="w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-black font-medium py-2 rounded-lg"
-  >
-    <Send size={18} />
-    Send Message
-  </button>
-</motion.form>
+          <button
+            type="submit"
+            className="w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-black font-medium py-2 rounded-lg"
+          >
+            <Send size={18} />
+            Send Message
+          </button>
+        </motion.form>
 
         {/* 🔗 SOCIAL LINKS */}
         <div className="flex justify-center gap-6 mt-10">

@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Code, Server, Smartphone, PenTool,Database,Cloud } from "lucide-react";
+import {
+  Code,
+  Server,
+  Smartphone,
+  PenTool,
+  Database,
+  Cloud,
+} from "lucide-react";
 
 const services = [
   {
@@ -23,15 +30,15 @@ const services = [
     icon: <PenTool size={32} />,
   },
   {
-  title: "Database Management",
-  desc: "Building and maintaining structured databases with efficient data modeling, CRUD operations, and seamless backend integration.",
-  icon: <Database size={32} />,
-},
-{
-  title: "Cloud Deployment (AWS)",
-  desc: "Deploying applications on AWS with cloud services, ensuring scalability, performance, and secure hosting.",
-  icon: <Cloud size={32} />,
-},
+    title: "Database Management",
+    desc: "Building and maintaining structured databases with efficient data modeling, CRUD operations, and seamless backend integration.",
+    icon: <Database size={32} />,
+  },
+  {
+    title: "Cloud Deployment (AWS)",
+    desc: "Deploying applications on AWS with cloud services, ensuring scalability, performance, and secure hosting.",
+    icon: <Cloud size={32} />,
+  },
 ];
 
 export default function Services() {
