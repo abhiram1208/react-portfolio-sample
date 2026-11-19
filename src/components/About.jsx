@@ -28,9 +28,13 @@ export default function About() {
             <img
               src={me}
               alt="Abhiram"
-              className="w-56 h-56 object-cover rounded-full 
-              border-4 border-cyan-400 
-              shadow-[0_0_25px_#22d3ee]"
+              width="224"
+              height="224"
+              loading="lazy"
+              decoding="async"
+              className="w-56 h-56 object-cover rounded-full
+  border-4 border-cyan-400
+  shadow-[0_0_25px_#22d3ee]"
             />
           </motion.div>
 
